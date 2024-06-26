@@ -3,8 +3,8 @@ export default function taskBlock(trueOrFalse) {
   const task2 = true;
 
   if (trueOrFalse) {
-    const task = true;
-    const task2 = false;
+    const innerTask = true; // renamed to avoid ESLint warning
+    const innerTask2 = false; // renamed to avoid ESLint warning
   }
 
   return [task, task2];
