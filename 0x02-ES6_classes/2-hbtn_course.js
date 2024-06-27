@@ -37,11 +37,16 @@ class HolbertonCourse {
   }
 
   // Setter for students
-  set students(value) {
-    if (!Array.isArray(value) || !value.every(student => typeof student === 'string')) {
-      throw new TypeError('Students must be an array of strings');
+  et students(students) {
+    if (students instanceof Array) {
+      this._students = students;
+    } else {
+      throw new TypeError('Students must be an Array');
     }
-    this._students = value;
+  }
+
+  get students() {
+    return this._students;
   }
 }
 
