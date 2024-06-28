@@ -6,6 +6,9 @@ class Pricing {
     this.currency = currency;
   }
 
+  /**
+   * @param {Number} amount
+   */
   set amount(amount) {
     if (typeof amount !== 'number') {
       throw new TypeError('Amount must be a Number');
@@ -17,6 +20,9 @@ class Pricing {
     return this._amount;
   }
 
+  /**
+   * @param {Currency} currency
+   */
   set currency(currency) {
     if (currency instanceof Currency) {
       this._currency = currency;
@@ -33,7 +39,10 @@ class Pricing {
     return `${this.amount} ${this.currency.displayFullCurrency()}`;
   }
 
-
+  /**
+   * @param {Number} amount
+   * @param {Number} conversionRate
+   */
   static convertPrice(amount, conversionRate) {
     if (typeof amount !== 'number') {
       throw new TypeError('amount must be a number');
