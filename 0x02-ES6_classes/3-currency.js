@@ -4,35 +4,31 @@ class Currency {
     this.name = name;
   }
 
-  // Getter for code
+ 
+  set code(code) {
+    if (typeof code !== 'string') {
+      throw new TypeError('Code must be a String');
+    }
+    this._code = code;
+  }
+
   get code() {
     return this._code;
   }
 
-  // Setter for code
-  set code(value) {
-    if (typeof value !== 'string') {
-      throw new TypeError('Code must be a string');
+  set name(name) {
+    if (typeof name !== 'string') {
+      throw new TypeError('Name must be a String');
     }
-    this._code = value;
+    this._name = name;
   }
 
-  // Getter for name
   get name() {
     return this._name;
   }
 
-  // Setter for name
-  set name(value) {
-    if (typeof value !== 'string') {
-      throw new TypeError('Name must be a string');
-    }
-    this._name = value;
-  }
-
-  // Method to display full currency
   displayFullCurrency() {
-    return `${this._name} (${this._code})`;
+    return `${this.name} (${this.code})`;
   }
 }
 
