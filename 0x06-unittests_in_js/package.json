@@ -35,9 +35,9 @@
     "url": 
   },
   "bugs": {
-    "url": 
+    "url": "https://github.com/Blessingngo/alx-backend-javascript/issues"
   },
-  "homepage":
+  "homepage": "https://github.com/Blessingngo/alx-backend-javascript/blob/main/0x06-unittests_in_js/README.md",
   "engines": {
     "node": "16.x",
     "npm": "8.x",
